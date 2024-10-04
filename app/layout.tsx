@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "AKCSE YG McGill",
+  title: "AKCSE McGill",
   description: "AKCSE YG McGill Chapter",
 };
 
@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav className="w-full h-full flex justify-between p-3">
           <div>
-            <Label>AKCSE YG McGill</Label>
+            <Label>AKCSE McGill</Label>
           </div>
           <div className="flex m-auto">
             <Button variant="ghost">About</Button>
