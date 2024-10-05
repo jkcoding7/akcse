@@ -18,11 +18,17 @@ export function MenuLink({ item }: menuLinkProps) {
     <div className="w-full">
       <Link href={item.path}>
         {pathName === item.path ? (
-          <Button variant="ghost" className="text-red-600 hover:text-red-600">
+          <Button
+            variant="ghost"
+            className="text-red-600 hover:text-red-600 hover:bg-white"
+          >
             {item.title}
           </Button>
         ) : (
-          <Button variant="ghost" className=" hover:text-red-600">
+          <Button
+            variant="ghost"
+            className=" hover:text-red-600 hover:bg-white"
+          >
             {item.title}
           </Button>
         )}

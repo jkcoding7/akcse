@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import { NextUIProvider } from "@nextui-org/react";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
+import Image from "next/image";
 import { MenuLink } from "./ui/menuLink";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -46,7 +46,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav className="w-full h-full flex justify-between p-3">
           <div>
-            <Label>AKCSE McGill</Label>
+            <Image
+              src="/logo.png"
+              width={140}
+              height={100}
+              alt="AKCSE McGill"
+            />
           </div>
           <div className="flex m-auto">
             {navMenuItems.map((item) => {
@@ -57,15 +62,10 @@ export default function RootLayout({
             <Button variant="ghost">Contact Us</Button>
           </div>
         </nav>
-        <div className="border-t w-full"></div>
+        <div className="border-t w-full h-full"></div>
         <NextUIProvider>
-          <div>{children}</div>
+          <div className="h-full">{children}</div>
         </NextUIProvider>
-        <footer>
-          <div>
-            <span>hihi</span>
-          </div>
-        </footer>
       </body>
     </html>
   );
