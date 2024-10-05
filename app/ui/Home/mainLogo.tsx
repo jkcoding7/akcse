@@ -6,7 +6,7 @@ import { Canvas, useFrame, useLoader, useThree } from "@react-three/fiber";
 import { useFBO, useGLTF, MeshTransmissionMaterial } from "@react-three/drei";
 import { easing } from "maath";
 import { Mesh } from "three";
-import { GLTF } from "three-stdlib";
+import { Clouds, Cloud, Sky as SkyImpl } from "@react-three/drei";
 
 export default function MainLogo() {
   return (
@@ -14,8 +14,9 @@ export default function MainLogo() {
       camera={{ position: [0, 0, 20], fov: 15 }}
       style={{ background: "#ffffff", borderRadius: "3%" }}
     >
-      <ambientLight intensity={0.5} />
+      <ambientLight intensity={Math.PI / 1.5} />
       <directionalLight position={[5, 5, 5]} intensity={1} />
+      <Sky />
       <Lens />
     </Canvas>
   );
@@ -77,6 +78,47 @@ function Lens({ damping = 0.15, ...props }) {
           transparent={true}
         />
       </mesh>
+    </>
+  );
+}
+
+function Sky() {
+  const ref = useRef<THREE.Group | null>(null);
+  const cloud0 = useRef<THREE.Mesh | null>(null);
+  const config = {
+    seed: 1,
+    segments: 14,
+    volume: 7,
+    opacity: 0.6,
+    fade: 13,
+    growth: 2,
+    speed: 0.03,
+    x: 6,
+    y: 1,
+    z: 2,
+    color: "white",
+  };
+
+  useFrame((state, delta) => {
+    // Ensure ref.current and cloud0.current are defined before accessing them
+    if (ref.current) {
+      ref.current.rotation.y = Math.cos(state.clock.elapsedTime / 2) / 2;
+      ref.current.rotation.x = Math.sin(state.clock.elapsedTime / 2) / 2;
+    }
+    if (cloud0.current) {
+      cloud0.current.rotation.y -= delta;
+    }
+  });
+  
+  return (
+    <>
+      <SkyImpl />
+      <group ref={ref}>
+        <Clouds material={THREE.MeshLambertMaterial} limit={400}>
+          <Cloud ref={cloud0} {...config} bounds={[6, 1, 2]} color="#f5d0f1" />
+          <Cloud {...config} bounds={[3, 1, 1]} color="#f4f5d6" seed={2} />
+        </Clouds>
+      </group>
     </>
   );
 }

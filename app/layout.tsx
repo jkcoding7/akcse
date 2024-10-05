@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import "./globals.css";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { MenuLink } from "./ui/menuLink";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,6 +12,29 @@ export const metadata: Metadata = {
   title: "AKCSE McGill",
   description: "AKCSE YG McGill Chapter",
 };
+
+const navMenuItems = [
+  {
+    title: "About",
+    path: "/about",
+  },
+  {
+    title: "Organization",
+    path: "/organization",
+  },
+  {
+    title: "Activities",
+    path: "/activities",
+  },
+  {
+    title: "Executives",
+    path: "/executives",
+  },
+  {
+    title: "Projects",
+    path: "/projects",
+  },
+];
 
 export default function RootLayout({
   children,
@@ -25,11 +49,9 @@ export default function RootLayout({
             <Label>AKCSE McGill</Label>
           </div>
           <div className="flex m-auto">
-            <Button variant="ghost">About</Button>
-            <Button variant="ghost">Organization</Button>
-            <Button variant="ghost">Activities</Button>
-            <Button variant="ghost">Executives</Button>
-            <Button variant="ghost">Projects</Button>
+            {navMenuItems.map((item) => {
+              return <MenuLink item={item} key={item.path} />;
+            })}
           </div>
           <div className=" mt-auto mb-auto mr-4">
             <Button variant="ghost">Contact Us</Button>
@@ -39,6 +61,11 @@ export default function RootLayout({
         <NextUIProvider>
           <div>{children}</div>
         </NextUIProvider>
+        <footer>
+          <div>
+            <span>hihi</span>
+          </div>
+        </footer>
       </body>
     </html>
   );
