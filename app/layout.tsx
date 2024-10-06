@@ -5,6 +5,7 @@ import "./globals.css";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { MenuLink } from "./ui/menuLink";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,10 +18,6 @@ const navMenuItems = [
   {
     title: "About",
     path: "/about",
-  },
-  {
-    title: "Organization",
-    path: "/organization",
   },
   {
     title: "Activities",
@@ -46,12 +43,14 @@ export default function RootLayout({
       <body className={inter.className}>
         <nav className="w-full h-full flex justify-between p-3">
           <div>
-            <Image
-              src="/logo.png"
-              width={140}
-              height={100}
-              alt="AKCSE McGill"
-            />
+            <Link href="/">
+              <Image
+                src="/logo.png"
+                width={140}
+                height={100}
+                alt="AKCSE McGill"
+              />
+            </Link>
           </div>
           <div className="flex m-auto">
             {navMenuItems.map((item) => {
