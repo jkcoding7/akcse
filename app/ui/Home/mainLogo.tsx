@@ -109,7 +109,7 @@ function Sky() {
       cloud0.current.rotation.y -= delta;
     }
   });
-  
+
   return (
     <>
       <SkyImpl />
