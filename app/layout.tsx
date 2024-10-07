@@ -52,7 +52,7 @@ export default function RootLayout({
               />
             </Link>
           </div>
-          <div className="flex m-auto">
+          <div className="lg:flex hidden m-auto ">
             {navMenuItems.map((item) => {
               return <MenuLink item={item} key={item.path} />;
             })}
