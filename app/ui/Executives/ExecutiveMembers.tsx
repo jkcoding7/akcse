@@ -5,6 +5,8 @@ import { initialTabs as tabs } from "./members";
 import { useState } from "react";
 import Image from "next/image";
 import { Label } from "@/components/ui/label";
+import { LiaInstagram, LiaLinkedin, LiaGithub } from "react-icons/lia";
+import { Button } from "@/components/ui/button";
 
 export default function ExecutiveMembers() {
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
@@ -41,22 +43,23 @@ export default function ExecutiveMembers() {
             className="grid grid-cols-4 gap-4 p-4 w-full h-auto"
           >
             {Object.entries(selectedTab.images).map(([name, images]) => {
+              const firstName = name.split(" ")[0].toLowerCase();
               return (
                 <>
                   <div className="w-full h-full grid">
-                    <div className="grid grid-cols-2 gap-1 h-70 w-full overflow-hidden">
+                    <div className="grid grid-cols-2 gap-1 h-full w-full">
                       <Image
                         src={images[0]}
                         alt={"image"}
-                        width={200}
-                        height={200}
+                        width={500}
+                        height={240}
                         className="object-cover rounded-lg w-full h-full"
                       />
                       <Image
                         src={images[1]}
                         alt={"image"}
-                        width={200}
-                        height={200}
+                        width={500}
+                        height={240}
                         className="object-cover rounded-lg w-full h-full"
                       />
                     </div>
@@ -64,31 +67,44 @@ export default function ExecutiveMembers() {
                       <Image
                         src={images[2]}
                         alt={"image"}
-                        width={200}
-                        height={200}
+                        width={1000}
+                        height={500}
                         className="object-cover rounded-lg w-full h-full"
                       />
                     </div>
                   </div>
-                  <div>
-                    <Label className="text-lg font-bold">
-                      {selectedTab.label}
-                    </Label>
-                    <br />
-                    <Label className="text-md">{name}</Label>
-                    <br />
-                    <div className="mt-2">
-                      <Label className="text-sm font-medium">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Etiam non erat bibendum, fringilla diam eu, consequat
-                        nulla. Mauris suscipit iaculis semper. Cras porttitor et
-                        urna ac mollis. Nullam in urna quis diam pharetra
-                        vehicula. Sed elit orci, malesuada eget pellentesque
-                        nec, finibus in lorem. In lobortis enim in metus
-                        pretium, a tincidunt lorem ullamcorper. Nunc dapibus
-                        odio a arcu tempus vulputate. Maecenas volutpat erat et
-                        velit pharetra, et tincidunt dolor feugiat.
+                  <div className="flex flex-col justify-between w-full h-full">
+                    <div className="grid">
+                      <Label className="text-lg font-bold">
+                        {selectedTab.label}
                       </Label>
+                      <Label className="text-md">{name}</Label>
+                      <div className="mt-2">
+                        <Label className="text-sm font-medium">
+                          Major: {selectedTab.info[firstName]["major"]}
+                        </Label>{" "}
+                        <br />
+                        <Label className="text-sm font-medium">
+                          MBTI: {selectedTab.info[firstName]["mbti"]}
+                        </Label>{" "}
+                        <br />
+                        <Label className="flex w-full h-full text-sm font-medium mt-3">
+                          {selectedTab.info[firstName]["intro"]}
+                        </Label>{" "}
+                        <br />
+                      </div>
+                    </div>
+
+                    <div className="flex mt-2 gap-2 justify-end">
+                      <Button variant="ghost">
+                        <LiaInstagram size={25} />
+                      </Button>
+                      <Button variant="ghost">
+                        <LiaLinkedin size={25} />
+                      </Button>
+                      <Button variant="ghost">
+                        <LiaGithub size={25} />
+                      </Button>
                     </div>
                   </div>
                 </>

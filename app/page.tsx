@@ -3,11 +3,13 @@ import MainText from "./ui/Home/mainText";
 
 export default function Home() {
   return (
-    <section className="lg:flex w-full h-fit">
-      <div className="w-full lg:w-1/2 h-[500px] lg:h-[800px] bg-white rounded-3xl shadow-lg lg:ml-3 mt-2">
+    <section className="lg:flex w-full h-full">
+      <div className="w-full lg:w-1/2 lg:h-[700px] xl:h-[900px] bg-white rounded-3xl shadow-lg lg:ml-3 mt-2">
         <MainLogo />
       </div>
-      <MainText />
+      <div className="flex w-full lg:w-1/2 h-full mt-auto">
+        <MainText />
+      </div>
     </section>
   );
 }

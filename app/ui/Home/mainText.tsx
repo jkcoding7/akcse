@@ -3,6 +3,7 @@
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function MainText() {
   return (
@@ -10,7 +11,7 @@ export default function MainText() {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="grid w-full lg:w-1/2 h-full text-center lg:m-auto mt-10"
+      className="grid w-full lg:w-1/2 text-center m-auto"
     >
       <Label className="text-3xl">Welcome to AKCSE McGill</Label>
       <motion.div
@@ -31,12 +32,14 @@ export default function MainText() {
         transition={{ delay: 0.3, duration: 0.7, ease: "easeOut" }}
         className="mt-4"
       >
-        <Button
-          variant="outline"
-          className="w-[150px] lg:w-1/3 m-auto border-1.5 border-red-600 shadow-lg text-red-800 hover:text-red-900"
-        >
-          Join AKCSE McGill
-        </Button>
+        <Link href="/about">
+          <Button
+            variant="outline"
+            className="w-2/3 m-auto border-1.5 border-red-600 shadow-lg text-red-800 hover:text-red-900"
+          >
+            Learn about AKCSE
+          </Button>
+        </Link>
       </motion.div>
     </motion.div>
   );
