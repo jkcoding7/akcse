@@ -124,7 +124,7 @@ export default function Timeline() {
           </div>
         </div>
       </div>
-      <div className="mt-8 w-full h-full p-12">
+      <div className="w-full h-full p-12">
         <div className="grid w-full h-full">
           <Label className="text-3xl">{events[selectedEvent].event}</Label>
           <Label className="text-lg">{events[selectedEvent].date}</Label>
@@ -133,7 +133,7 @@ export default function Timeline() {
           <div className="mt-5">
             <Label>{events[selectedEvent].description}</Label>
           </div>
-          <div className="w-full h-full p-3">
+          <div className="w-full h-full p-3 -mt-20">
             <ActivityPictures
               image1={events[selectedEvent].image1}
               image2={events[selectedEvent].image2}

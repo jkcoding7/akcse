@@ -16,23 +16,23 @@ export default function ActivityPictures({
 }: ActivityPicturesProps) {
   return (
     <>
-      <div className="w-full h-64">
+      <div className="w-full h-52 lg:h-64">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
-          className="cursor-grab w-full h-64"
+          className="cursor-grab w-full h-52 lg:h-64"
         >
           <Image
             src={image1}
             alt="AKCSE"
             width={500}
             height={500}
-            className="object-cover rounded-lg w-full h-full"
+            className="object-cover rounded-lg w-full h-52 lg:h-64"
           />
         </motion.div>
       </div>
-      <div className="flex mt-1.5 w-full h-40 gap-1.5">
+      <div className="flex mt-1.5 w-full h-32 lg:h-44 gap-1.5">
         <motion.div
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
