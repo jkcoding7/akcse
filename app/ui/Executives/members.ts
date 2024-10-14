@@ -16,7 +16,7 @@ export const executiveMembers = [
         major: "Computer Science",
         mbti: "ENTJ",
         intro:
-          "Hi! I'm a U3 Computer Science student at McGill University. I'm all about bringing creativity to my projects, especially when it comes to website design and 3D modeling. I also love to snowboard and play music!",
+          "Hiii! I'm a U3 student at McGill U. I enjoy web development and 3D modeling because it lets me be creative. When I'm not doing projects, I play music and shred the slopes :)",
       },
       ahreum: {
         major: "Computer Science & AI",
@@ -115,7 +115,7 @@ export const executiveMembers = [
       chaeyeon: {
         major: "Cognitive Science",
         mbti: "INFJ",
-        intro: "",
+        intro: "Hello! I'm a second-year Cognitive Science student at McGill with a strong interest in biopharmaceuticals and the field of neuroscience. In my free time, I enjoy playing games and watching sports.",
       },
     },
   },
