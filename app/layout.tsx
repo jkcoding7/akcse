@@ -61,7 +61,7 @@ export default function RootLayout({
         </nav>
         <div className="border-t"></div>
         <NextUIProvider>
-          <div className="w-full lg:h-[720px] xl:h-[925px]">{children}</div>
+          <div className="w-full lg:h-[790px] xl:h-[810px]">{children}</div>
         </NextUIProvider>
         <footer className="flex w-full border-t-1">
           <div className="flex w-full">

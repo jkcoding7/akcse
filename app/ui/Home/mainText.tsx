@@ -11,14 +11,14 @@ export default function MainText() {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.4, ease: "easeOut" }}
-      className="grid w-full lg:w-1/2 text-center m-auto"
+      className="grid w-full lg:w-5/6 text-center m-auto"
     >
       <Label className="text-3xl">Welcome to AKCSE McGill</Label>
       <motion.div
         initial={{ opacity: 0, x: 100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
-        className="w-4/5 text-center p-2 m-auto"
+        className="w-5/6 text-center p-2 m-auto"
       >
         <Label className="text-md">
           We are a vibrant community of Korean-Canadian McGill undergraduates,
@@ -35,7 +35,7 @@ export default function MainText() {
         <Link href="/about">
           <Button
             variant="outline"
-            className="w-2/3 m-auto border-1.5 border-red-600 shadow-lg text-red-800 hover:text-red-900"
+            className="w-3/5 m-auto border-1.5 border-red-600 shadow-lg text-red-800 hover:text-red-900"
           >
             Learn about AKCSE
           </Button>
