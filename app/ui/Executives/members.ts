@@ -23,7 +23,7 @@ export const executiveMembers = [
       },
       ahreum: {
         major: "Computer Science & AI",
-        mbti: "INTJ",
+        mbti: "INFJ",
         intro:
           "Hello, I am a CS student interested in NLP, bioinformatics and AI. I dont have any hobbies at this point of life, but I am trying to do some sports with our fellow execs",
         instagram: "https://www.instagram.com/reummmii/",
