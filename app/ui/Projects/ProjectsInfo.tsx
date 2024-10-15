@@ -23,9 +23,10 @@ export default function ProjectsInfo() {
         />
         <Label className="font-bold">Project Lead: </Label>
         <Label className="font-normal">Jinwon Lee</Label> <br />
-        <Label className="font-bold">
-          Contributers: Taewon Hwang, Ahreum Lee, Dana Lee
-        </Label>{" "}
+        <Label className="font-bold">Contributers: </Label>
+        <Label className="font-normal">
+          Taewon Hwang, Ahreum Lee, Dana Lee
+        </Label>
         <br />
         <Label className="font-bold">Purpose: </Label>
         <Label className="font-normal">
