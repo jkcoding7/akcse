@@ -66,10 +66,11 @@ export default function RootLayout({
 
         <div className="border-t"></div>
         <NextUIProvider>
-          <div className="w-full sm:h-[720px] lg:h-[790px] xl:h-[810px]">
+          <div className="w-full h-full lg:h-[790px] xl:h-[810px]">
             {children}
           </div>
         </NextUIProvider>
+
         <footer className="flex w-full border-t-1">
           <div className="flex w-full">
             <div className="w-full h-full ml-1 justify-start">

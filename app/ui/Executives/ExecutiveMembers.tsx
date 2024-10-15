@@ -40,7 +40,7 @@ export default function ExecutiveMembers() {
             animate={{ x: 0, opacity: 1 }} // Move to its position with full opacity
             exit={{ x: -100, opacity: 0 }} // Fade out to the left
             transition={{ duration: 0.5 }}
-            className="grid grid-cols-4 gap-4 p-4 w-full h-auto"
+            className="grid lg:grid-cols-4 grid-cols-1 gap-4 p-4 w-full h-auto"
           >
             {Object.entries(selectedTab.images).map(([name, images]) => {
               const firstName = name.split(" ")[0].toLowerCase();

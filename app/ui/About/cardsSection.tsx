@@ -44,31 +44,33 @@ export default function CardsSection() {
   ];
 
   return (
-    <div className="flex flex-col w-full h-full items-center gap-6">
-      <div className="flex w-full h-full justify-center gap-6">
+    <div className="lg:flex lg:flex-col w-full h-full items-center gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full">
         {cards.map((card) => (
           <motion.div
             key={card.id}
-            className="w-1/4 p-4 bg-white rounded-lg shadow-lg cursor-pointer"
+            className="w-full p-4 bg-white rounded-lg shadow-lg cursor-pointer"
             onClick={() =>
               setSelectedCard(card.id === selectedCard ? null : card.id)
             }
             initial={{ y: 0 }}
             animate={{
-              y: selectedCard === card.id ? -10 : 0, // Lift card up when selected
+              y: selectedCard === card.id ? -10 : 0,
               boxShadow:
                 selectedCard === card.id
                   ? "0px 8px 15px rgba(0, 0, 0, 0.2)"
-                  : "0px 4px 10px rgba(0, 0, 0, 0.1)", // Increase shadow for selected card
+                  : "0px 4px 10px rgba(0, 0, 0, 0.1)",
             }}
             whileHover={{
               y: -10,
               boxShadow: "0px 8px 15px rgba(0, 0, 0, 0.2)",
-            }} // Lift card when hovered
+            }}
             transition={{ type: "spring", stiffness: 300, damping: 20 }}
           >
             <p className="flex justify-center">{card.icon}</p>
-            <h3 className="text-xl font-bold mb-2 text-center">{card.title}</h3>
+            <h3 className="text-xl font-bold mb-2 text-center hidden sm:block">
+              {card.title}
+            </h3>
           </motion.div>
         ))}
       </div>
@@ -80,7 +82,7 @@ export default function CardsSection() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: -100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 20 }}
-          className="w-full p-5 mt-4 bg-white rounded-lg shadow-lg"
+          className="lg:w-full p-5 mt-4 bg-white rounded-lg shadow-lg"
         >
           <div className="w-full h-full text-left">
             <Label className="text-2xl">
