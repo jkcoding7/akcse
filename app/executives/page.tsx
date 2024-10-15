@@ -5,7 +5,7 @@ export default function ExecutivesPage() {
   return (
     <section className="p-7">
       <HearderText />
-      <div className="mt-5">
+      <div className="mt-10">
         <ExecutiveMembers />
       </div>
     </section>

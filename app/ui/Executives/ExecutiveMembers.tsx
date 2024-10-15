@@ -96,15 +96,25 @@ export default function ExecutiveMembers() {
                     </div>
 
                     <div className="flex mt-2 gap-2 justify-end">
-                      <Button variant="ghost">
-                        <LiaInstagram size={25} />
-                      </Button>
-                      <Button variant="ghost">
-                        <LiaLinkedin size={25} />
-                      </Button>
-                      <Button variant="ghost">
-                        <LiaGithub size={25} />
-                      </Button>
+                      <a href={selectedTab.info[firstName]["instagram"]}>
+                        <Button variant="ghost">
+                          <LiaInstagram size={25} />
+                        </Button>
+                      </a>
+                      <a href={selectedTab.info[firstName]["linkedin"]}>
+                        <Button variant="ghost">
+                          <LiaLinkedin size={25} />
+                        </Button>
+                      </a>
+                      {selectedTab.info[firstName]["github"] ? (
+                        <a href={selectedTab.info[firstName]["github"]}>
+                          <Button variant="ghost">
+                            <LiaGithub size={25} />
+                          </Button>
+                        </a>
+                      ) : (
+                        <></>
+                      )}
                     </div>
                   </div>
                 </>

@@ -7,6 +7,7 @@ import { MenuLink } from "./ui/menuLink";
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
 import { SlSocialInstagram } from "react-icons/sl";
+import MobileNav from "./ui/Home/MobileNavigation/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,15 +54,21 @@ export default function RootLayout({
               />
             </Link>
           </div>
-          <div className="lg:flex hidden m-auto ">
+          <div className="lg:flex hidden m-auto">
             {navMenuItems.map((item) => {
               return <MenuLink item={item} key={item.path} />;
             })}
           </div>
+          <div className="lg:hidden">
+            <MobileNav />
+          </div>
         </nav>
+
         <div className="border-t"></div>
         <NextUIProvider>
-          <div className="w-full lg:h-[790px] xl:h-[810px]">{children}</div>
+          <div className="w-full sm:h-[720px] lg:h-[790px] xl:h-[810px]">
+            {children}
+          </div>
         </NextUIProvider>
         <footer className="flex w-full border-t-1">
           <div className="flex w-full">
