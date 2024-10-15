@@ -19,7 +19,7 @@ export default function ProjectsInfo() {
           width={400}
           height={400}
           alt="AKCSE Website"
-          className="w-full h-96 rounded-lg border shadow-lg p-1"
+          className="w-full h-80 rounded-lg border shadow-lg p-1 mb-2"
         />
         <Label className="font-bold">Project Lead: </Label>
         <Label className="font-normal">Jinwon Lee</Label> <br />
@@ -65,7 +65,7 @@ export default function ProjectsInfo() {
           width={400}
           height={400}
           alt="AKCSE Website"
-          className="w-full h-96 rounded-lg border shadow-lg p-1"
+          className="w-full h-80 rounded-lg border shadow-lg p-1 mb-2"
         />
         <Label className="font-bold">Project Lead: </Label>
         <Label className="font-normal">Jinwon Lee</Label> <br />
