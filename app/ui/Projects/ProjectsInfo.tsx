@@ -59,40 +59,37 @@ export default function ProjectsInfo() {
         transition={{ delay: 0.2, type: "spring", stiffness: 100, damping: 20 }}
         className="w-1/2 h-full"
       >
-        <Label className="text-lg">AKCSE McGill Website</Label> <br />
+        <Label className="text-lg">Ed Block</Label> <br />
         <Image
-          src="/projects/akcseWebsite/image1.jpg"
+          src="/projects/akcseWebsite/edblock.jpg"
           width={400}
           height={400}
           alt="AKCSE Website"
           className="w-full h-96 rounded-lg border shadow-lg p-1"
         />
-        <Label className="font-bold">Project Lead: </Label>
-        <Label className="font-normal">Jinwon Lee</Label> <br />
         <Label className="font-bold">Contributers: </Label> <br />
+        <Label className="font-normal">Taewon Hwang, Ahreum Lee, Chaeyeon Kang, Seol Han</Label> <br />
         <Label className="font-bold">Purpose: </Label>
         <Label className="font-normal">
-          It aims to provide an platform where members can be easily updated
-          with AKCSE events. It also encourages the members to contribute to the
-          website to familiarize them with GitHub and web development. This
-          project will ultimately create a community where members can learn to
-          collaborate and improve their skill sets.
+          Eating disorders (EDs) are a growing public health concern, significantly impacting individuals' physical, psychological, 
+          and emotional well-being. Studies show a rise in ED prevalence, particularly among younger demographics, 
+          with media playing a critical role in exacerbating these disorders. 
         </Label>
         <br />
         <Label className="font-bold">Achievements: </Label>
         <Label className="font-normal">
-          The project successfully developed and launched AKCSE McGill website.
-          It provides information about the events.
+          We used different methods of preprocessing and machine learning models to test and compare results. 
+          Stop word removal along with Naive Bayes classifier proved to be the most effective. 
+          It achieved a maximum accuracy of 90% with the Naive Bayes classifier. 
+          
         </Label>
         <br />
         <Label className="font-bold">Description: </Label>
         <Label className="font-normal">
-          AKCSE McGill is a website that students within the student body
-          collaboratively create. The website serves as a space where
-          individuals can be informed about events, intitiatives, and updates
-          within AKCSE; this platform also offers hands-on experiences for
-          members to gain learning opportunities through web development and
-          GitHub Collaboration both within and outside the club.
+          As one of the biggest platforms for various groups to consume media, YouTube has one solution for censoring potentially harmful content: 
+          manual flagging by users. Taking one step further, the AKCSE Life Science (LS) and Computer Science (CS) divisions 
+          collaborated to develop a Chrome extension powered by machine learning (ML), specifically to automatically moderate YouTube 
+          content and help prevent ED-triggering videos.
         </Label>{" "}
         <br />
       </motion.div>
