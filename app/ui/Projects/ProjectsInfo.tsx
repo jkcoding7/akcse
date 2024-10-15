@@ -23,7 +23,10 @@ export default function ProjectsInfo() {
         />
         <Label className="font-bold">Project Lead: </Label>
         <Label className="font-normal">Jinwon Lee</Label> <br />
-        <Label className="font-bold">Contributers: </Label> <br />
+        <Label className="font-bold">
+          Contributers: Taewon Hwang, Ahreum Lee, Dana Lee
+        </Label>{" "}
+        <br />
         <Label className="font-bold">Purpose: </Label>
         <Label className="font-normal">
           It aims to provide an platform where members can be easily updated
@@ -67,30 +70,40 @@ export default function ProjectsInfo() {
           alt="AKCSE Website"
           className="w-full h-80 rounded-lg border shadow-lg p-1 mb-2"
         />
-        <Label className="font-bold">Contributers: </Label> <br />
-        <Label className="font-normal">Taewon Hwang, Ahreum Lee, Chaeyeon Kang, Seol Han</Label> <br />
+        <Label className="font-bold">Members: </Label>
+        <Label className="font-normal">
+          Taewon Hwang, Ahreum Lee, Chaeyeon Kang, Seol Han
+        </Label>{" "}
+        <br />
         <Label className="font-bold">Purpose: </Label>
         <Label className="font-normal">
-          Eating disorders (EDs) are a growing public health concern, significantly impacting individuals' physical, psychological, 
-          and emotional well-being. Studies show a rise in ED prevalence, particularly among younger demographics, 
-          with media playing a critical role in exacerbating these disorders. This project aims to address this issue by developing censoring tool that 
-          limits media content related to extreme diets, creating a safer online environment for vulnerable individuals, especially young audiences.
+          Eating disorders (EDs) are a growing public health concern,
+          significantly impacting individuals' physical, psychological, and
+          emotional well-being. Studies show a rise in ED prevalence,
+          particularly among younger demographics, with media playing a critical
+          role in exacerbating these disorders. This project aims to address
+          this issue by developing censoring tool that limits media content
+          related to extreme diets, creating a safer online environment for
+          vulnerable individuals, especially young audiences.
         </Label>
         <br />
         <Label className="font-bold">Achievements: </Label>
         <Label className="font-normal">
-          We used different methods of preprocessing and machine learning models to test and compare results. 
-          Stop word removal along with Naive Bayes classifier proved to be the most effective. 
-          It achieved a maximum accuracy of 90% with the Naive Bayes classifier. 
-          
+          We used different methods of preprocessing and machine learning models
+          to test and compare results. Stop word removal along with Naive Bayes
+          classifier proved to be the most effective. It achieved a maximum
+          accuracy of 90% with the Naive Bayes classifier.
         </Label>
         <br />
         <Label className="font-bold">Description: </Label>
         <Label className="font-normal">
-          As one of the biggest platforms for various groups to consume media, YouTube has one solution for censoring potentially harmful content: 
-          manual flagging by users. Taking one step further, the AKCSE Life Science (LS) and Computer Science (CS) divisions 
-          collaborated to develop a Chrome extension powered by machine learning (ML), specifically to automatically moderate YouTube 
-          content and help prevent ED-triggering videos.
+          As one of the biggest platforms for various groups to consume media,
+          YouTube has one solution for censoring potentially harmful content:
+          manual flagging by users. Taking one step further, the AKCSE Life
+          Science (LS) and Computer Science (CS) divisions collaborated to
+          develop a Chrome extension powered by machine learning (ML),
+          specifically to automatically moderate YouTube content and help
+          prevent ED-triggering videos.
         </Label>{" "}
         <br />
       </motion.div>
