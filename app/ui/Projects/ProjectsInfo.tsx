@@ -73,7 +73,8 @@ export default function ProjectsInfo() {
         <Label className="font-normal">
           Eating disorders (EDs) are a growing public health concern, significantly impacting individuals' physical, psychological, 
           and emotional well-being. Studies show a rise in ED prevalence, particularly among younger demographics, 
-          with media playing a critical role in exacerbating these disorders. 
+          with media playing a critical role in exacerbating these disorders. This project aims to address this issue by developing censoring tool that 
+          limits media content related to extreme diets, creating a safer online environment for vulnerable individuals, especially young audiences.
         </Label>
         <br />
         <Label className="font-bold">Achievements: </Label>
