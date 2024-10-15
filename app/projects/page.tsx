@@ -7,7 +7,7 @@ export default function ProjectsPage() {
       <div>
         <Label className="text-2xl">AKCSE McGill Projects</Label>
       </div>
-      <div className="flex w-full h-full gap-2 mt-7">
+      <div className="lg:flex w-full h-full gap-2 mt-7">
         <ProjectsInfo />
       </div>
     </section>

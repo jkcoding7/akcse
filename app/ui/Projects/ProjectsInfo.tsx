@@ -11,7 +11,7 @@ export default function ProjectsInfo() {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        className="w-1/2 h-full"
+        className="w-full lg:w-1/2 h-full"
       >
         <Label className="text-lg">AKCSE McGill Website</Label> <br />
         <Image
@@ -57,7 +57,7 @@ export default function ProjectsInfo() {
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2, type: "spring", stiffness: 100, damping: 20 }}
-        className="w-1/2 h-full"
+        className="w-full lg:w-1/2 h-full mt-7 lg:mt-0"
       >
         <Label className="text-lg">AKCSE McGill Website</Label> <br />
         <Image
