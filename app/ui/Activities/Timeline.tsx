@@ -60,7 +60,11 @@ export default function Timeline() {
               <Button
                 onClick={() => eventTimeline("Orientation Night")}
                 variant="outline"
-                className="border-red-600 shadow-lg"
+                className={`shadow-lg ${
+                  selectedEvent === "Orientation Night"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
                 value={selectedEvent}
               >
                 Orientation Night
@@ -71,7 +75,11 @@ export default function Timeline() {
               <Button
                 onClick={() => eventTimeline("Ideathon")}
                 variant="outline"
-                className="border-black"
+                className={`shadow-lg ${
+                  selectedEvent === "Ideathon"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
               >
                 Ideathon
               </Button>
@@ -81,7 +89,11 @@ export default function Timeline() {
               <Button
                 onClick={() => eventTimeline("Ideathon")}
                 variant="outline"
-                className="border-black"
+                className={`shadow-lg ${
+                  selectedEvent === "Ideathon"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
               >
                 Ideathon
               </Button>
@@ -105,7 +117,11 @@ export default function Timeline() {
               <Button
                 onClick={() => eventTimeline("Mini CKC")}
                 variant="outline"
-                className="border-black"
+                className={`shadow-lg ${
+                  selectedEvent === "Mini CKC"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
               >
                 Mini CKC
               </Button>
@@ -115,7 +131,11 @@ export default function Timeline() {
               <Button
                 onClick={() => eventTimeline("Christmas Party")}
                 variant="outline"
-                className="border-black"
+                className={`shadow-lg ${
+                  selectedEvent === "Christmas Party"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
               >
                 Christmas Party
               </Button>
@@ -125,7 +145,11 @@ export default function Timeline() {
               <Button
                 onClick={() => eventTimeline("Ideathon")}
                 variant="outline"
-                className="border-black"
+                className={`shadow-lg ${
+                  selectedEvent === "Hackathon"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
               >
                 Hackathon
               </Button>
