@@ -6,47 +6,74 @@ import { useState } from "react";
 import ActivityPictures from "./ActivitiesPics";
 
 const events = {
+  "MTL Korean Youth Camp": {
+    event: "MTL Korean Youth Camp",
+    date: "August 31 - September 1st 2024",
+    description:
+      "The Fondation Communautaire Canadienne-Coréenne du Québec (FCCCQ) has proudly partnered with the AKCSE Quebec YP and YG chapters to host an annual mentorship event. Over the course of two days, 60 participants engaged in mentor presentations and Q&A sessions. This event aims to provide guidance to any students that are uncertain about their career choices or future directions. With the support of 32 mentors, students gain a new perspective on how to navigate their professional journeys.",
+    image1: "/activities/Youth Camp/Youth_Camp_1.jpeg",
+    image2: "/activities/Youth Camp/Youth_Camp_2.jpg",
+    image3: "/activities/Youth Camp/Youth_Camp_3.jpeg",
+  },
   "Orientation Night": {
     event: "Orientation Night",
     date: "September 20th 2024",
     description:
-      "The purpose of an orientation is to introduce new members and students to an organization or environment. It helps individuals understand key policies, procedures, expectations, and the resources available to them. Orientation typically involves familiarizing participants with the physical layout, organizational culture, team dynamics, and specific roles or responsibilities. It's also an opportunity for networking and getting answers to questions, which helps individuals transition smoothly into their new roles or settings, ultimately fostering a positive, supportive, and informed experience.",
+      "The AKCSE McGill Chapter hosts annual orientations aimed at connecting new and returning members of the Korean-Canadian McGill community. The event serves as an opportunity to introduce the AKCSE Team, and outline any initiatives for the upcoming academic year. Through fun activities and games, participants engage in the community and build a network of students that are in similar fields of study. This is an excellent opportunity to start off the school year and to welcome any new members of the YG School Chapter community.",
     image1: "/activities/ot/image1.jpg",
     image2: "/activities/ot/image2.jpg",
     image3: "/activities/ot/image3.jpg",
   },
-  "Mini CKC": {
-    event: "Mini CKC",
+  "Beyond Boundaries 2024": {
+    event: "Beyond Boundaries 2024",
     date: "November 2nd 2024",
     description:
-      "Beyond Boundaries: Exploring Prospects in STEM is an exciting research symposium organized by AKCSE YP chapters, including YP Greater Toronto, Quebec, and Ottawa. The event aims to connect students and early-career professionals from Eastern Canada to explore innovative research, showcase projects, and exchange transformative ideas shaping the future of STEM. It will take place at the University of Toronto, Sidney Smith Hall. Participants can expect accommodation, food, and travel support, with the opportunity to network and collaborate in a dynamic environment",
+      "Beyond Boundaries aims to bring together some of the brightest students and early-career professionals from across Eastern Canada (GTLO, Ottawa, Montreal) to explore cutting edge research, showcase innovative projects, and exchange ideas that shape the future of STEM. The 2024 event is held at the University of Toronto.",
     image1: "/activities/ot/image1.jpg",
     image2: "/activities/ot/image2.jpg",
     image3: "/activities/ot/image3.jpg",
   },
-  Ideathon: {
+  "Ideathon": {
     event: "Ideathon",
     date: "TBD",
     description:
-      "Ideathon is a preparatory event designed to generate ideas and plans for future Hackathons. During this event, AKCSE members collaborate to brainstorm innovative project ideas and present them through proposals using tools like PowerPoint or Figma. Each proposal outlines the purpose of the idea, the tools required to implement it, and the expected outcomes or benefits. Ideathon aims to provide participants with a platform to explore creative concepts and develop structured plans that could later be transformed into full-scale projects during Hackathons.",
-    image1: "/activities/ot/image1.jpg",
-    image2: "/activities/ot/image2.jpg",
-    image3: "/activities/ot/image3.jpg",
+      "As preparation for hackathon events, students from diverse programs in McGill unleash their creativity and technical skills during a brainstorming of clever applications and websites, which can eventually become an AKCSE summer project. As opposed to hackathons, the event is open to all faculties and majors. Students have the opportunity to gain valuable feedback from professionals in YP Quebec and experience practical tools such as Figma. ",
+    image1: "/activities/Ideathon/Ideathon_1.jpeg",
+    image2: "/activities/Ideathon/Ideathon_2.jpeg",
+    image3: "/activities/Ideathon/Ideathon_3.jpeg",
   },
   "Christmas Party": {
     event: "Christmas Party",
     date: "TBD",
     description:
-      "Christmas Event is a festive celebration marking the end of the semester for AKCSE members. The event aims to foster camaraderie and provide an opportunity for networking among members in a relaxed and joyful atmosphere. With the pressures of exams behind them, participants can unwind, release stress, and enjoy quality time together. Through various activities, games, and shared moments, the Christmas event strengthens the bonds within the community, making it a perfect way to close the semester on a high note.",
-    image1: "/activities/ot/image1.jpg",
-    image2: "/activities/ot/image2.jpg",
-    image3: "/activities/ot/image3.jpg",
+      "Christmas Event is a festive celebration marking the end of the semester for AKCSE members. This event aims to provide AKCSE members a way to unwind and relax after a stressful semester. This is a fantastic opportunity to bond with fellow AKCSE members and meet new faces as we prepare for an exciting upcoming semester. ",
+    image1: "/activities/Christmas/Christmas_1.png",
+    image2: "/activities/Christmas/Christmas_2.png",
+    image3: "/activities/Christmas/Christmas_3.png",
+  },
+  "YG Seminar": {
+    event: "YG Seminar",
+    date: "TBD",
+    description:
+      "The YG seminar invites professionals from different STEM fields such as medicine, IT, engineering, and natural sciences. This is a great opportunity for students to gain a bigger picture of what it’s like to be in research or industry by listening to their journey and firsthand experience over the years. This is also a great chance for students to directly ask presenters in a more approachable environment. ",
+    image1: "/activities/ot/Christmas_1.png",
+    image2: "/activities/ot/Christmas_2.png",
+    image3: "/activities/ot/Christmas_3.png",
+  },
+  "Meet Your Mentor": {
+    event: "Meet Your Mentor",
+    date: "TBD",
+    description:
+      "Every year, Korean clubs at McGill MECA x KSS x AKCSE hold a mentoring event, aimed at creating a networking space between our Korean students and esteemed individuals from various fields, including management, medicine and health sciences, engineering, law, IT and others. The purpose of this gathering is to foster connections, share experiences, and provide our students with insights into different career paths. ",
+    image1: "/activities/MYM/MYM_1.jpg",
+    image2: "/activities/MYM/MYM_2.jpg",
+    image3: "/activities/MYM/MYM_3.jpg",
   },
 };
 
 export default function Timeline() {
   const [selectedEvent, setSelectedEvent] =
-    useState<string>("Orientation Night");
+    useState<string>("MTL Korean Youth Camp");
 
   function eventTimeline(value: string) {
     setSelectedEvent(value);
@@ -57,31 +84,34 @@ export default function Timeline() {
         <div className="w-full h-full">
           <div className="flex w-5/6 rounded-lg ml-auto mr-auto justify-between">
             <div>
+              
               <Button
-                onClick={() => eventTimeline("Orientation Night")}
+                onClick={() => eventTimeline("MTL Korean Youth Camp")}
                 variant="outline"
                 className={`shadow-lg ${
-                  selectedEvent === "Orientation Night"
+                  selectedEvent === "MTL Korean Youth Camp"
                     ? "border-red-600"
                     : "border-black"
                 }`}
                 value={selectedEvent}
               >
-                Orientation Night
+                MTL Korean Youth Camp
+              
+              
               </Button>
               <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
             </div>
             <div>
               <Button
-                onClick={() => eventTimeline("Ideathon")}
+                onClick={() => eventTimeline("YG Seminar")}
                 variant="outline"
                 className={`shadow-lg ${
-                  selectedEvent === "Ideathon"
+                  selectedEvent === "YG Seminar"
                     ? "border-red-600"
                     : "border-black"
                 }`}
               >
-                Ideathon
+                YG Seminar
               </Button>
               <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
             </div>{" "}
@@ -101,11 +131,16 @@ export default function Timeline() {
             </div>{" "}
             <div>
               <Button
-                onClick={() => eventTimeline("Ideathon")}
+                onClick={() => eventTimeline("Meet Your Mentor")}
                 variant="outline"
-                className="border-black"
+                className={`shadow-lg ${
+                  selectedEvent === "Meet Your Mentor"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
               >
-                Amazing
+                Meet Your Mentor
+              
               </Button>
               <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
             </div>
@@ -115,15 +150,29 @@ export default function Timeline() {
             <div>
               <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
               <Button
-                onClick={() => eventTimeline("Mini CKC")}
+                onClick={() => eventTimeline("Orientation Night")}
                 variant="outline"
                 className={`shadow-lg ${
-                  selectedEvent === "Mini CKC"
+                  selectedEvent === "Orientation Night"
                     ? "border-red-600"
                     : "border-black"
                 }`}
               >
-                Mini CKC
+                Orientation Night
+              </Button>
+            </div>
+            <div>
+              <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
+              <Button
+                onClick={() => eventTimeline("Beyond Boundaries 2024")}
+                variant="outline"
+                className={`shadow-lg ${
+                  selectedEvent === "Beyond Boundaries 2024"
+                    ? "border-red-600"
+                    : "border-black"
+                }`}
+              >
+                Beyond Boundaries 2024
               </Button>
             </div>
             <div>
@@ -139,20 +188,7 @@ export default function Timeline() {
               >
                 Christmas Party
               </Button>
-            </div>
-            <div>
-              <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
-              <Button
-                onClick={() => eventTimeline("Ideathon")}
-                variant="outline"
-                className={`shadow-lg ${
-                  selectedEvent === "Hackathon"
-                    ? "border-red-600"
-                    : "border-black"
-                }`}
-              >
-                Hackathon
-              </Button>
+            
             </div>
           </div>
         </div>
