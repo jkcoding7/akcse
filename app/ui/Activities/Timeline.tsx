@@ -29,9 +29,9 @@ const events = {
     date: "November 2nd 2024",
     description:
       "Beyond Boundaries aims to bring together some of the brightest students and early-career professionals from across Eastern Canada (GTLO, Ottawa, Montreal) to explore cutting edge research, showcase innovative projects, and exchange ideas that shape the future of STEM. The 2024 event is held at the University of Toronto.",
-    image1: "/activities/ot/image1.jpg",
-    image2: "/activities/ot/image2.jpg",
-    image3: "/activities/ot/image3.jpg",
+    image1: "/activities/minickc/image1.jpg",
+    image2: "/activities/minickc/image2.jpg",
+    image3: "/activities/minickc/image3.jpg",
   },
   "Ideathon": {
     event: "Ideathon",
@@ -46,7 +46,7 @@ const events = {
     event: "Christmas Party",
     date: "TBD",
     description:
-      "Christmas Event is a festive celebration marking the end of the semester for AKCSE members. This event aims to provide AKCSE members a way to unwind and relax after a stressful semester. This is a fantastic opportunity to bond with fellow AKCSE members and meet new faces as we prepare for an exciting upcoming semester. ",
+      "The AKCSE Christmas Event is a festive celebration marking the end of the semester for AKCSE members. This event aims to provide AKCSE members a way to unwind and relax after a stressful semester. This is a fantastic opportunity to bond with fellow AKCSE members and meet new faces as we prepare for an exciting upcoming semester. ",
     image1: "/activities/Christmas/image1.jpg",
     image2: "/activities/Christmas/image2.jpg",
     image3: "/activities/Christmas/image3.jpg",
@@ -56,9 +56,9 @@ const events = {
     date: "TBD",
     description:
       "The YG seminar invites professionals from different STEM fields such as medicine, IT, engineering, and natural sciences. This is a great opportunity for students to gain a bigger picture of what it’s like to be in research or industry by listening to their journey and firsthand experience over the years. This is also a great chance for students to directly ask presenters in a more approachable environment. ",
-    image1: "/activities/ot/image1.jpg",
-    image2: "/activities/ot/image2.jpg",
-    image3: "/activities/ot/image3.jpg",
+    image1: "/activities/Seminar/image1.jpg",
+    image2: "/activities/Seminar/image2.jpg",
+    image3: "/activities/Seminar/image3.jpg",
   },
   "Meet Your Mentor": {
     event: "Meet Your Mentor",
