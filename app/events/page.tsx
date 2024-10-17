@@ -1,5 +1,6 @@
 import { Label } from "@/components/ui/label";
 import Timeline from "../ui/Activities/Timeline";
+import MobileTimeline from "../ui/Activities/MobileTimeline";
 
 export default function ActivitiesPage() {
   return (
@@ -9,7 +10,12 @@ export default function ActivitiesPage() {
           AKCSE McGill Events Timeline
         </Label>
       </div>
-      <Timeline />
+      <div className="hidden lg:block">
+        <Timeline />
+      </div>
+      <div className="black lg:hidden">
+        <MobileTimeline />
+      </div>
     </section>
   );
 }
