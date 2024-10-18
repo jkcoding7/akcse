@@ -1,5 +1,6 @@
 import { Label } from "@/components/ui/label";
 import ProjectsInfo from "../ui/Projects/ProjectsInfo";
+import ProjectsDisplay from "../ui/Projects/ProjectsDisplay";
 
 export default function ProjectsPage() {
   return (
@@ -7,8 +8,11 @@ export default function ProjectsPage() {
       <div>
         <Label className="text-2xl">AKCSE McGill Projects</Label>
       </div>
-      <div className="lg:flex w-full h-full gap-2">
+      {/* <div className="lg:flex w-full h-full gap-2">
         <ProjectsInfo />
+      </div> */}
+      <div className="mt-2">
+        <ProjectsDisplay />
       </div>
     </section>
   );
