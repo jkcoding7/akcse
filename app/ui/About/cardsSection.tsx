@@ -15,7 +15,8 @@ export default function CardsSection() {
       icon: <Image src="/headquarter.png" width={80} height={70} alt="AKCSE" />,
       content_title: "What is AKCSE?",
       content:
-        "The Association of Korean-Canadian Scientists and Engineers (AKCSE) is a non-profit organization established in 1986. It serves mainly as a grounds for networking between Korean-Canadians in the field to develop their full career potential. AKCSE consists of 17 university school chapters and 12 local chapters across the provinces of Canada, with its headquarters based in Ontario. The chapters divide based on different stages in one's career, notably the undergraduate Young Generation (YG),  the Young Professionals (YP), and the local chapter. AKCSE is affiliated with The Ministry of Science and ICT of the Korean Government, the Korean Federation of Science & Technology Societies and many different organizations. With these partnerships formed with reliable science and engineering institutions in Korea, AKCSE is proud to provide member with experience in conferences and research/networking forums held annually. Additionally, students can apply for the KCSSF Scholarship, granting 12 students scholarships valued up to $3000.\n\n AKCSE Official Website: https://www.akcse.ca/",
+        "The Association of Korean-Canadian Scientists and Engineers (AKCSE) is a non-profit organization established in 1986. It serves mainly as a grounds for networking between Korean-Canadians in the field to develop their full career potential. AKCSE consists of 17 university school chapters and 12 local chapters across the provinces of Canada, with its headquarters based in Ontario. The chapters divide based on different stages in one's career, notably the undergraduate Young Generation (YG),  the Young Professionals (YP), and the local chapter. AKCSE is affiliated with The Ministry of Science and ICT of the Korean Government, the Korean Federation of Science & Technology Societies and many different organizations. With these partnerships formed with reliable science and engineering institutions in Korea, AKCSE is proud to provide member with experience in conferences and research/networking forums held annually. Additionally, students can apply for the KCSSF Scholarship, granting 12 students scholarships valued up to $3000.",
+      official_website: "https://www.akcse.ca/",
     },
     {
       id: 2,
@@ -24,6 +25,7 @@ export default function CardsSection() {
       content_title: "YG School Chapter in AKCSE",
       content:
         "AKCSE's Young Generation National (YGN) School Chapter is composed of undergraduate students all across Canada. Through a tightly bound community, AKCSE YG provides Korean-Canadian students with networking and socializing opportunities, encourages personal and professional growth, and inter-chapter cooperation between different universities. As of January 2023, the YG Chapter includes 17 branches across major universities in Canada.\n\nAKCSE McGill takes part in the YG Chapter, and aims to form a network of Korean-Canadian students at McGill University to promote both professional and personal growth as a community. Through activities like orientation, seminars and hackathons, McGill YG aims to inspire and motivate members to engage in networking amongst scientists, and build a connection between Korean-Canadian students in McGill.",
+      official_website: "https://www.akcsemcgill.ca/",
     },
     {
       id: 3,
@@ -31,7 +33,8 @@ export default function CardsSection() {
       icon: <Image src="/yp.png" width={80} height={70} alt="AKCSE" />,
       content_title: "Young Professionals in AKCSE",
       content:
-        "The Young Professionals (YP) division of AKCSE is composed of Korean-Canadian professionals in science, engineering, and related fields. The main goal of the division is to connect young professionals all around Canada to collaborate, and share their knowledge and experiences. Members take part in various AKCSE events and opportunities for both personal and professional growth. Through collaborations with different universities and regions around Canada, members are provided with a platform to promote their expertise in science and engineering\n\nAs of January 2023, the YP division consists of 8 regional branches. The YP Québec Chapter aims to create a broader network of members throughout the country, promoting mentorship, career advancement, and projects. From early professionals to more experienced mentors, YP Quebec supports young professionals to become leaders in their fields.\n\n Quebec YP Official Website: https://www.akcseqc.com/",
+        "The Young Professionals (YP) division of AKCSE is composed of Korean-Canadian professionals in science, engineering, and related fields. The main goal of the division is to connect young professionals all around Canada to collaborate, and share their knowledge and experiences. Members take part in various AKCSE events and opportunities for both personal and professional growth. Through collaborations with different universities and regions around Canada, members are provided with a platform to promote their expertise in science and engineering\n\nAs of January 2023, the YP division consists of 8 regional branches. The YP Québec Chapter aims to create a broader network of members throughout the country, promoting mentorship, career advancement, and projects. From early professionals to more experienced mentors, YP Quebec supports young professionals to become leaders in their fields.",
+      official_website: "https://www.akcseqc.com/",
     },
     {
       id: 4,
@@ -101,6 +104,17 @@ export default function CardsSection() {
                 </Label>
               ))}
           </div>
+          <br />
+          {cards[selectedCard - 1].official_website ? (
+            <a
+              href={cards[selectedCard - 1].official_website}
+              className="flex w-full justify-start underline"
+            >
+              <Label>Official Website</Label>
+            </a>
+          ) : (
+            <></>
+          )}
         </motion.div>
       )}
     </div>

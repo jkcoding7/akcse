@@ -64,14 +64,15 @@ const events = {
   },
   "YG Seminar": {
     event: "YG Seminar",
-    date: "TBD",
+    date: "October 18th 2024",
     description:
       "The YG seminar invites professionals from different STEM fields such as medicine, IT, engineering, and natural sciences. This is a great opportunity for students to gain a bigger picture of what it’s like to be in research or industry by listening to their journey and firsthand experience over the years. This is also a great chance for students to directly ask presenters in a more approachable environment. ",
     image1: "/activities/Seminar/image1.jpg",
     image2: "/activities/Seminar/image2.jpg",
     image3: "/activities/Seminar/image3.jpg",
-    registrationForm: "",
-    deadline: "",
+    registrationForm:
+      "https://docs.google.com/forms/d/1070kHnRtN69AQm3nfEiFJZ3uZmqqa5YcLK0_ghenkH4/edit",
+    deadline: "October 18th 2024",
   },
   "Meet Your Mentor": {
     event: "Meet Your Mentor",
@@ -91,17 +92,10 @@ export default function Timeline() {
     "MTL Korean Youth Camp"
   );
 
-  useEffect(() => {
-    const savedEvent = localStorage.getItem("selectedEvent");
-    if (savedEvent) {
-      setSelectedEvent(savedEvent);
-    }
-  }, []);
-
   function eventTimeline(value: string) {
     setSelectedEvent(value);
-    localStorage.setItem("selectedEvent", value); // Save the event
   }
+
   return (
     <section>
       <div className="flex pt-16">
