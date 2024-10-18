@@ -78,7 +78,7 @@ export default function RootLayout({
                 © 2024 AKCSE McGill Executives. All rights reserved.
               </Label>
             </div>
-            <div className="flex w-full h-full justify-end m-auto gap-1 mr-3">
+            {/* <div className="flex w-full h-full justify-end m-auto gap-1 mr-3">
               <div>
                 <Label className="text-sm font-light">Instagram</Label>
               </div>
@@ -88,7 +88,7 @@ export default function RootLayout({
               >
                 <SlSocialInstagram size={15} className="mt-auto mb-auto" />
               </a>
-            </div>
+            </div> */}
           </div>
         </footer>
       </body>
