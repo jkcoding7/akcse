@@ -80,9 +80,7 @@ export default function RootLayout({
             </div>
             <div className="flex w-full h-full justify-end m-auto gap-1 mr-3">
               <div>
-                <Label className="text-sm font-light">
-                  AKCSE McGill Instagram
-                </Label>
+                <Label className="text-sm font-light">Instagram</Label>
               </div>
               <a
                 href="https://www.instagram.com/akcse_mcgill/"
