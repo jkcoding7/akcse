@@ -7,17 +7,20 @@ interface ActivityPicturesProps {
   image1: string;
   image2: string;
   image3: string;
+  selectedEvent: string;
 }
 
 export default function ActivityPictures({
   image1,
   image2,
   image3,
+  selectedEvent,
 }: ActivityPicturesProps) {
   return (
     <>
       <div className="w-full h-52 lg:h-64">
         <motion.div
+          key={selectedEvent}
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.4, ease: "easeOut" }}
@@ -34,6 +37,7 @@ export default function ActivityPictures({
       </div>
       <div className="flex mt-1.5 w-full h-32 lg:h-44 gap-1.5">
         <motion.div
+          key={`${selectedEvent}-image2`} // Adding key to re-trigger animation
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2, duration: 0.4, ease: "easeOut" }}
@@ -48,6 +52,7 @@ export default function ActivityPictures({
           />
         </motion.div>
         <motion.div
+          key={`${selectedEvent}-image3`} // Adding key to re-trigger animation
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3, duration: 0.4, ease: "easeOut" }}

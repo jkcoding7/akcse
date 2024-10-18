@@ -7,7 +7,7 @@ export default function ActivitiesPage() {
     <section className="w-full h-full">
       <div className="flex w-full pt-7 pl-11">
         <Label className="w-full text-3xl ml-auto">
-          AKCSE McGill Events Timeline
+          2024 - 2025 Main Events Timeline
         </Label>
       </div>
       <div className="hidden lg:block">

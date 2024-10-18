@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ActivityPictures from "./ActivitiesPics";
 
 const events = {
@@ -14,6 +14,8 @@ const events = {
     image1: "/activities/Youth Camp/image1.jpg",
     image2: "/activities/Youth Camp/image2.jpg",
     image3: "/activities/Youth Camp/image3.jpg",
+    registrationForm: "https://forms.gle/pCHQJV3quJo9QH5KA",
+    deadline: "August 31st 2024",
   },
   "Orientation Night": {
     event: "Orientation Night",
@@ -23,6 +25,9 @@ const events = {
     image1: "/activities/ot/image1.jpg",
     image2: "/activities/ot/image2.jpg",
     image3: "/activities/ot/image3.jpg",
+    registrationForm:
+      "https://docs.google.com/forms/d/14gMT8WXx3vtMiF-0p72mMtnxlfwvbPItjEoCXB0-Ows/edit",
+    deadline: "September 20th 2024",
   },
   "Beyond Boundaries 2024": {
     event: "Beyond Boundaries 2024",
@@ -32,8 +37,10 @@ const events = {
     image1: "/activities/minickc/image1.jpg",
     image2: "/activities/minickc/image2.jpg",
     image3: "/activities/minickc/image3.jpg",
+    registrationForm: "",
+    deadline: "",
   },
-  "Ideathon": {
+  Ideathon: {
     event: "Ideathon",
     date: "TBD",
     description:
@@ -41,6 +48,8 @@ const events = {
     image1: "/activities/Ideathon/image1.jpg",
     image2: "/activities/Ideathon/image2.jpg",
     image3: "/activities/Ideathon/image3.jpg",
+    registrationForm: "",
+    deadline: "",
   },
   "Christmas Party": {
     event: "Christmas Party",
@@ -50,6 +59,8 @@ const events = {
     image1: "/activities/Christmas/image1.jpg",
     image2: "/activities/Christmas/image2.jpg",
     image3: "/activities/Christmas/image3.jpg",
+    registrationForm: "",
+    deadline: "",
   },
   "YG Seminar": {
     event: "YG Seminar",
@@ -59,6 +70,8 @@ const events = {
     image1: "/activities/Seminar/image1.jpg",
     image2: "/activities/Seminar/image2.jpg",
     image3: "/activities/Seminar/image3.jpg",
+    registrationForm: "",
+    deadline: "",
   },
   "Meet Your Mentor": {
     event: "Meet Your Mentor",
@@ -68,15 +81,26 @@ const events = {
     image1: "/activities/MYM/image1.jpg",
     image2: "/activities/MYM/image2.jpg",
     image3: "/activities/MYM/image3.jpg",
+    registrationForm: "",
+    deadline: "",
   },
 };
 
 export default function Timeline() {
-  const [selectedEvent, setSelectedEvent] =
-    useState<string>("MTL Korean Youth Camp");
+  const [selectedEvent, setSelectedEvent] = useState<string>(
+    "MTL Korean Youth Camp"
+  );
+
+  useEffect(() => {
+    const savedEvent = localStorage.getItem("selectedEvent");
+    if (savedEvent) {
+      setSelectedEvent(savedEvent);
+    }
+  }, []);
 
   function eventTimeline(value: string) {
     setSelectedEvent(value);
+    localStorage.setItem("selectedEvent", value); // Save the event
   }
   return (
     <section>
@@ -84,7 +108,6 @@ export default function Timeline() {
         <div className="w-full h-full">
           <div className="flex w-5/6 rounded-lg ml-auto mr-auto justify-between">
             <div>
-              
               <Button
                 onClick={() => eventTimeline("MTL Korean Youth Camp")}
                 variant="outline"
@@ -96,8 +119,6 @@ export default function Timeline() {
                 value={selectedEvent}
               >
                 MTL Korean Youth Camp
-              
-              
               </Button>
               <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
             </div>
@@ -140,7 +161,6 @@ export default function Timeline() {
                 }`}
               >
                 Meet Your Mentor
-              
               </Button>
               <div className="flex w-1 h-10 border-l-2 border-black rounded-lg m-auto"></div>
             </div>
@@ -188,7 +208,6 @@ export default function Timeline() {
               >
                 Christmas Party
               </Button>
-            
             </div>
           </div>
         </div>
@@ -203,16 +222,31 @@ export default function Timeline() {
             <Label>{events[selectedEvent].description}</Label>
             <br />
             <br />
-            <Label>Registration Form: </Label>
-            <br />
-            <Label>Registration Deadline: </Label>
-            <Label className="underline">September 20th 2024</Label>
+            {events[selectedEvent].registrationForm !== "" ? (
+              <>
+                <Label>Registration Form: </Label>
+                <a
+                  href={events[selectedEvent].registrationForm}
+                  className="underline"
+                >
+                  <Label>Link</Label>
+                </a>
+                <br />
+                <Label>Registration Deadline: </Label>
+                <Label className="underline font-bold">
+                  {events[selectedEvent].deadline}
+                </Label>
+              </>
+            ) : (
+              <></>
+            )}
           </div>
           <div className="w-full h-full p-3 -mt-20">
             <ActivityPictures
               image1={events[selectedEvent].image1}
               image2={events[selectedEvent].image2}
               image3={events[selectedEvent].image3}
+              selectedEvent={selectedEvent}
             />
           </div>
         </div>
