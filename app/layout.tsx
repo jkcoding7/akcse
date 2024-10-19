@@ -6,7 +6,6 @@ import Image from "next/image";
 import { MenuLink } from "./ui/menuLink";
 import Link from "next/link";
 import { Label } from "@/components/ui/label";
-import { SlSocialInstagram } from "react-icons/sl";
 import MobileNav from "./ui/Home/MobileNavigation/MobileNav";
 import Head from "next/head";
 
