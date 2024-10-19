@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <link rel="icon" href="/AKCSE_McGill.png" type="image/png" />
         <title>AKCSE McGill - Korean-Canadian Scientists and Engineers</title>
         <meta
           name="description"
@@ -74,6 +75,15 @@ export default function RootLayout({
         />
       </Head>
       <head>
+        <link rel="icon" href="/AKCSE_McGill.png" type="image/png" />
+        <meta
+          property="og:image"
+          content="https://akcsemcgill.ca/AKCSE_McGill.png"
+        />
+        <meta
+          name="twitter:image"
+          content="https://akcsemcgill.ca/AKCSE_McGill.png"
+        />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
