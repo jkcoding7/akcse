@@ -18,3 +18,6 @@
 ## Development Tools
 - [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 - [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+
+## Contribution Process
+Refer to **akcse_contributing.pdf** in the project repository.
