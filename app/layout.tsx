@@ -8,12 +8,22 @@ import Link from "next/link";
 import { Label } from "@/components/ui/label";
 import { SlSocialInstagram } from "react-icons/sl";
 import MobileNav from "./ui/Home/MobileNavigation/MobileNav";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "AKCSE McGill",
   description: "AKCSE YG McGill Chapter",
+};
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "AKCSE McGill",
+  url: "https://akcsemcgill.ca",
+  logo: "https://akcsemcgill.ca/AKCSE_McGill.png",
+  sameAs: ["https://www.instagram.com/akcse_mcgill/"],
 };
 
 const navMenuItems = [
@@ -42,8 +52,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>AKCSE McGill - Korean-Canadian Scientists and Engineers</title>
+        <meta
+          name="description"
+          content="Learn about AKCSE McGill, a vibrant community for Korean-Canadian scientists and engineers, offering networking, mentorship, and development opportunities."
+        />
+        <meta name="keywords" content="AKCSE, AKCSE McGill, 악세, 악세 맥길" />
+        <meta property="og:title" content="AKCSE McGill" />
+        <meta
+          property="og:description"
+          content="Official page of AKCSE McGill."
+        />
+        <meta
+          property="og:image"
+          content="https://akcsemcgill.ca/AKCSE_McGill.png"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </Head>
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"></link>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+        ></link>
       </head>
       <body className={`${inter.className} h-screen`}>
         <nav className="flex w-full justify-between p-3">
@@ -81,17 +115,6 @@ export default function RootLayout({
                 © 2024 AKCSE McGill Executives. All rights reserved.
               </Label>
             </div>
-            {/* <div className="flex w-full h-full justify-end m-auto gap-1 mr-3">
-              <div>
-                <Label className="text-sm font-light">Instagram</Label>
-              </div>
-              <a
-                href="https://www.instagram.com/akcse_mcgill/"
-                className="mt-auto mb-auto"
-              >
-                <SlSocialInstagram size={15} className="mt-auto mb-auto" />
-              </a>
-            </div> */}
           </div>
         </footer>
       </body>
