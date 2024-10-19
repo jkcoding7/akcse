@@ -10,7 +10,7 @@ const projectsInfo = {
   AKCSE_McGill_Website: {
     image: "/AKCSE_McGill.png",
     projectName: "AKCSE McGill Website",
-    contributers: "Jinwon Lee, Taewon Hwang, Dana Lee, Ahreum Lee",
+    contributers: "Jinwon Lee, Taewon Hwang, Dana Lee, Ahreum Lee, Junsoo Kim",
     purpose:
       "It aims to provide an platform where members can be easily updated with AKCSE events. It also encourages the members to contribute to the website to familiarize them with GitHub and web development. This project will ultimately create a community where members can learn to collaborate and improve their skill sets.",
     achievements:
