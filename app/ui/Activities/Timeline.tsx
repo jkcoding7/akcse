@@ -10,7 +10,7 @@ const events = {
     event: "MTL Korean Youth Camp",
     date: "August 31 - September 1st 2024",
     description:
-      "The Fondation Communautaire Canadienne-Coréenne du Québec (FCCCQ) has proudly partnered with the AKCSE Quebec YP and YG chapters to host an annual mentorship event. Over the course of two days, 60 participants engaged in mentor presentations and Q&A sessions. This event aims to provide guidance to any students that are uncertain about their career choices or future directions. With the support of 32 mentors, students gain a new perspective on how to navigate their professional journeys.",
+      "The Fondation Communautaire Canadienne-Coréenne du Québec (FCCCQ) has proudly partnered with the AKCSE Quebec YP and YG chapters to host an annual mentorship event. Over the course of two days, 60 participants engaged in mentor presentations and Q&A sessions. This event aims to provide guidance for students that are uncertain about their career choices or future directions. With the support of 32 mentors, students gain a new perspective on how to navigate their professional journeys.",
     image1: "/activities/Youth Camp/image1.jpg",
     image2: "/activities/Youth Camp/image2.jpg",
     image3: "/activities/Youth Camp/image3.jpg",
@@ -21,7 +21,7 @@ const events = {
     event: "Orientation Night",
     date: "September 20th 2024",
     description:
-      "The AKCSE McGill Chapter hosts annual orientations aimed at connecting new and returning members of the Korean-Canadian McGill community. The event serves as an opportunity to introduce the AKCSE Team, and outline any initiatives for the upcoming academic year. Through fun activities and games, participants engage in the community and build a network of students that are in similar fields of study. This is an excellent opportunity to start off the school year and to welcome any new members of the YG School Chapter community.",
+      "The AKCSE McGill Chapter hosts annual orientations to connect new and returning Korean-Canadian McGill community members. The event serves as an opportunity to introduce the AKCSE Team, and outline any initiatives for the upcoming academic year. Through fun activities and games, participants engage in the community and build a network of students who are in similar fields of study. This is an excellent opportunity to start the school year and welcome any new YG School Chapter community members.",
     image1: "/activities/ot/image1.jpg",
     image2: "/activities/ot/image2.jpg",
     image3: "/activities/ot/image3.jpg",
@@ -44,7 +44,7 @@ const events = {
     event: "Ideathon",
     date: "TBA",
     description:
-      "As preparation for hackathon events, students from diverse programs in McGill unleash their creativity and technical skills during a brainstorming of clever applications and websites, which can eventually become an AKCSE summer project. As opposed to hackathons, the event is open to all faculties and majors. Students have the opportunity to gain valuable feedback from professionals in YP Quebec and experience practical tools such as Figma. ",
+      "In preparation for hackathon events, students from diverse programs in McGill unleash their creativity and technical skills by brainstorming clever applications and websites, which can eventually become an AKCSE summer project. Unlike hackathons, the event is open to all faculties and majors. Students have the opportunity to gain valuable feedback from professionals in YP Quebec and experience practical tools such as Figma.",
     image1: "/activities/Ideathon/image1.jpg",
     image2: "/activities/Ideathon/image2.jpg",
     image3: "/activities/Ideathon/image3.jpg",
@@ -55,7 +55,7 @@ const events = {
     event: "Christmas Party",
     date: "TBA",
     description:
-      "The AKCSE Christmas Event is a festive celebration marking the end of the semester for AKCSE members. This event aims to provide AKCSE members a way to unwind and relax after a stressful semester. This is a fantastic opportunity to bond with fellow AKCSE members and meet new faces as we prepare for an exciting upcoming semester. ",
+      "The AKCSE Christmas Event is a festive celebration marking the end of the semester for AKCSE members. This event intends to provide AKCSE members with a way to unwind and relax after a stressful semester. This is a fantastic opportunity to bond with fellow AKCSE members and meet new faces as we prepare for an exciting upcoming semester.",
     image1: "/activities/Christmas/image1.jpg",
     image2: "/activities/Christmas/image2.jpg",
     image3: "/activities/Christmas/image3.jpg",
@@ -66,7 +66,7 @@ const events = {
     event: "YG Seminar",
     date: "October 18th 2024",
     description:
-      "The YG seminar invites professionals from different STEM fields such as medicine, IT, engineering, and natural sciences. This is a great opportunity for students to gain a bigger picture of what it’s like to be in research or industry by listening to their journey and firsthand experience over the years. This is also a great chance for students to directly ask presenters in a more approachable environment. ",
+      "The YG seminar invites professionals from different STEM fields such as medicine, IT, engineering, and natural sciences. This is an excellent opportunity for students to gain a bigger picture of what it's like to be in research or industry by listening to their journey and firsthand experience over the years. The seminar is also an excellent chance for students to directly ask presenters in a more approachable environment.",
     image1: "/activities/Seminar/image1.jpg",
     image2: "/activities/Seminar/image2.jpg",
     image3: "/activities/Seminar/image3.jpg",

@@ -38,7 +38,7 @@ const events = {
     event: "YG Seminar",
     date: "TBA",
     description:
-      "Opportunity for students to gain an image of what it’s like to be in research or industry by listening to their journey. ",
+      "Opportunity for students to gain an image of what it's like to be in research or industry by listening to their journey.",
     image1: "/activities/Seminar/image1.jpg",
     image2: "/activities/Seminar/image3.jpg",
     image3: "/activities/Seminar/image3.jpg",
@@ -61,7 +61,7 @@ const events = {
     event: "Ideathon",
     date: "TBA",
     description:
-      "Students unleash their creativity and technical skills during a brainstorming of clever applications and websites. ",
+      "Students unleash their creativity and technical skills during a brainstorming of clever applications and websites.",
     image1: "/activities/Ideathon/image1.jpg",
     image2: "/activities/Ideathon/image2.jpg",
     image3: "/activities/Ideathon/image3.jpg",
@@ -72,7 +72,7 @@ const events = {
     event: "Christmas Party",
     date: "TBA",
     description:
-      "Celebration marking the end of the semester for AKCSE members. Unwind and relax after a stressful semester.  ",
+      "Celebration marking the end of the semester for AKCSE members. Unwind and relax after a stressful semester.",
     image1: "/activities/Christmas/image1.jpg",
     image2: "/activities/Christmas/image2.jpg",
     image3: "/activities/Christmas/image3.jpg",
