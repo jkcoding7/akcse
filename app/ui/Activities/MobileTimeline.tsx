@@ -10,7 +10,8 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
-
+import { useInView } from "react-intersection-observer";
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const events = {
   "MTL Korean Youth Camp": {
@@ -78,221 +79,61 @@ const events = {
   },
 };
 
+
 export default function MobileTimeline() {
+  const {ref,inView} = useInView({
+    triggerOnce:true,
+  });
+ 
+  
   return (
-    <section className="mt-3">
-      <VerticalTimeline lineColor="black" animate={true}>
-      <motion.div
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.0, ease: "easeOut" }}
-        >       
+    <section className="mt-3" >
+      <VerticalTimeline lineColor="black" animate={false}  >
+    
+        {Object.keys(events).map((eventKey) => {
+           const event = events[eventKey];
+         
+          return (
+            <ScrollAnimation animateIn="fadeInRight">
             <VerticalTimelineElement
-              visible={true}
-              //key={eventKey}
-              date={events["MTL Korean Youth Camp"].date}
+           
+            
+              key={eventKey}
+              date={event.date}
               iconStyle={{ background: "#000000", color: "#fff" }} // Customize icon styles
-              className=""
+              className="vertical-timeline-element"
+              visible={inView} 
             >
-              <h3 className="vertical-timeline-element-title">{events["MTL Korean Youth Camp"].event}</h3>
-              <p>{events["MTL Korean Youth Camp"].description}</p>
+              
+              <h3 className="vertical-timeline-element-title">{event.event}</h3>
+              <p>{event.description}</p>
               <div className="grid grid-cols-2 gap-1 h-44 w-full overflow-hidden">
-              <Image
-                        src={events["MTL Korean Youth Camp"].image2}
-                        alt={"image"}
-                        width={500}
-                        height={240}
-                        className="object-cover rounded-lg w-full h-full"
-                      />
-                      <Image
-                        src={events["MTL Korean Youth Camp"].image3}
-                        alt={"image"}
-                        width={500}
-                        height={240}
-                        className="object-cover rounded-lg w-full h-full"
-                      />             
-              </div>              
-            </VerticalTimelineElement>
-          </motion.div>
-            <motion.div initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}>
-
-            <VerticalTimelineElement
-              visible={true}
-               
-                date={events["Orientation Night"].date}
-                iconStyle={{ background: "#000000", color: "#fff" }} // Customize icon styles
-                className=""
-              >
-                <h3 className="vertical-timeline-element-title">{events["Orientation Night"].event}</h3>
-                <p>{events["MTL Korean Youth Camp"].description}</p>
-                <div className="grid grid-cols-2 gap-1 h-44 w-full overflow-hidden">
                 <Image
-                          src={events["Orientation Night"].image2}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />
-                        <Image
-                          src={events["Orientation Night"].image3}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />             
-                </div> 
-              
-            </VerticalTimelineElement>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}>
-            <VerticalTimelineElement
-              visible={true}
-               
-                date={events["Beyond Boundaries 2024"].date}
-                iconStyle={{ background: "#000000", color: "#fff" }} // Customize icon styles
-                className=""
-              >
-                <h3 className="vertical-timeline-element-title">{events["Beyond Boundaries 2024"].event}</h3>
-                <p>{events["MTL Korean Youth Camp"].description}</p>
-                <div className="grid grid-cols-2 gap-1 h-44 w-full overflow-hidden">
+                  src={event.image2}
+                  alt={"image"}
+                  width={500}
+                  height={240}
+                  className="object-cover rounded-lg w-full h-full"
+                />
                 <Image
-                          src={events["Beyond Boundaries 2024"].image2}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />
-                        <Image
-                          src={events["Beyond Boundaries 2024"].image3}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />             
-                </div> 
-              
-            </VerticalTimelineElement>
-            </motion.div>
+                  src={event.image3}
+                  alt={"image"}
+                  width={500}
+                  height={240}
+                  className="object-cover rounded-lg w-full h-full"
+                />
+              </div>
             
-            <VerticalTimelineElement
-              visible={true}
-               
-                date={events["Ideathon"].date}
-                iconStyle={{ background: "#000000", color: "#fff" }} // Customize icon styles
-                className=""
-              >
-                <h3 className="vertical-timeline-element-title">{events["Ideathon"].event}</h3>
-                <p>{events["MTL Korean Youth Camp"].description}</p>
-                <div className="grid grid-cols-2 gap-1 h-44 w-full overflow-hidden">
-                <Image
-                          src={events["Ideathon"].image2}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />
-                        <Image
-                          src={events["Ideathon"].image3}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />             
-                </div> 
-              
             </VerticalTimelineElement>
-            <VerticalTimelineElement
-              visible={true}
-               
-                date={events["Christmas Party"].date}
-                iconStyle={{ background: "#000000", color: "#fff" }} // Customize icon styles
-                className=""
-              >
-                <h3 className="vertical-timeline-element-title">{events["Christmas Party"].event}</h3>
-                <p>{events["MTL Korean Youth Camp"].description}</p>
-                <div className="grid grid-cols-2 gap-1 h-44 w-full overflow-hidden">
-                <Image
-                          src={events["Christmas Party"].image2}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />
-                        <Image
-                          src={events["Christmas Party"].image3}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />             
-                </div> 
-              
-            </VerticalTimelineElement>
-            <VerticalTimelineElement
-              visible={true}
-               
-                date={events["YG Seminar"].date}
-                iconStyle={{ background: "#000000", color: "#fff" }} // Customize icon styles
-                className=""
-              >
-                <h3 className="vertical-timeline-element-title">{events["YG Seminar"].event}</h3>
-                <p>{events["MTL Korean Youth Camp"].description}</p>
-                <div className="grid grid-cols-2 gap-1 h-44 w-full overflow-hidden">
-                <Image
-                          src={events["YG Seminar"].image2}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />
-                        <Image
-                          src={events["YG Seminar"].image3}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />             
-                </div> 
-              
-            </VerticalTimelineElement>
-
-            <VerticalTimelineElement
-              visible={true}
-               
-                date={events["Meet Your Mentor"].date}
-                iconStyle={{ background: "#000000", color: "#fff" }} // Customize icon styles
-                className=""
-              >
-                <h3 className="vertical-timeline-element-title">{events["Meet Your Mentor"].event}</h3>
-                <p>{events["MTL Korean Youth Camp"].description}</p>
-                <div className="grid grid-cols-2 gap-1 h-44 w-full overflow-hidden">
-                <Image
-                          src={events["Meet Your Mentor"].image2}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />
-                        <Image
-                          src={events["Meet Your Mentor"].image3}
-                          alt={"image"}
-                          width={500}
-                          height={240}
-                          className="object-cover rounded-lg w-full h-full"
-                        />             
-                </div> 
-            </VerticalTimelineElement>
-            
-     
-
+            </ScrollAnimation>
+      
+          );
           
+        })}
+           
         
       </VerticalTimeline>
+      
     </section>
   );
 }
