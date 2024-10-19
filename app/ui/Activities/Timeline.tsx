@@ -42,7 +42,7 @@ const events = {
   },
   Ideathon: {
     event: "Ideathon",
-    date: "TBD",
+    date: "TBA",
     description:
       "As preparation for hackathon events, students from diverse programs in McGill unleash their creativity and technical skills during a brainstorming of clever applications and websites, which can eventually become an AKCSE summer project. As opposed to hackathons, the event is open to all faculties and majors. Students have the opportunity to gain valuable feedback from professionals in YP Quebec and experience practical tools such as Figma. ",
     image1: "/activities/Ideathon/image1.jpg",
@@ -53,7 +53,7 @@ const events = {
   },
   "Christmas Party": {
     event: "Christmas Party",
-    date: "TBD",
+    date: "TBA",
     description:
       "The AKCSE Christmas Event is a festive celebration marking the end of the semester for AKCSE members. This event aims to provide AKCSE members a way to unwind and relax after a stressful semester. This is a fantastic opportunity to bond with fellow AKCSE members and meet new faces as we prepare for an exciting upcoming semester. ",
     image1: "/activities/Christmas/image1.jpg",
@@ -76,7 +76,7 @@ const events = {
   },
   "Meet Your Mentor": {
     event: "Meet Your Mentor",
-    date: "TBD",
+    date: "TBA",
     description:
       "Every year, Korean clubs at McGill MECA x KSS x AKCSE hold a mentoring event, aimed at creating a networking space between our Korean students and esteemed individuals from various fields, including management, medicine and health sciences, engineering, law, IT and others. The purpose of this gathering is to foster connections, share experiences, and provide our students with insights into different career paths. ",
     image1: "/activities/MYM/image1.jpg",

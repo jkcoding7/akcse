@@ -1,5 +1,4 @@
 import { Label } from "@/components/ui/label";
-import ProjectsInfo from "../ui/Projects/ProjectsInfo";
 import ProjectsDisplay from "../ui/Projects/ProjectsDisplay";
 
 export default function ProjectsPage() {
