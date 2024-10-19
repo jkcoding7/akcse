@@ -7,6 +7,7 @@ const schemaData = {
   "@type": "Organization",
   name: "AKCSE McGill",
   url: "https://akcsemcgill.ca",
+  logo: "https://akcsemcgill.ca/AKCSE_McGill.png",
   sameAs: ["https://www.instagram.com/akcse_mcgill/"],
 };
 
@@ -25,7 +26,7 @@ export default function Home() {
           property="og:description"
           content="Official page of AKCSE McGill."
         />
-        <meta property="og:image" content="/AKCSE_McGill.png" />
+        <meta property="og:image" content="https://akcsemcgill.ca/AKCSE_McGill.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
