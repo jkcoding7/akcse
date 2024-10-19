@@ -106,7 +106,7 @@ export default function MobileTimeline() {
                 date={event.date}
                 iconStyle={{ background: "#F5F5DC", color: "#000000" }} // Customize icon styles
                 className="vertical-timeline-element"
-                style={{ margin: "60px 0" }}
+                style={{ marginBottom: "60px" }}
                 icon={<img src={event.icon}></img>}
               >
                 <h3 className="vertical-timeline-element-title font-bold">
