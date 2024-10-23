@@ -71,8 +71,8 @@ const events = {
     image2: "/activities/Seminar/image2.jpg",
     image3: "/activities/Seminar/image3.jpg",
     registrationForm:
-      "https://docs.google.com/forms/d/1070kHnRtN69AQm3nfEiFJZ3uZmqqa5YcLK0_ghenkH4/edit",
-    deadline: "October 18th 2024",
+      "https://docs.google.com/forms/d/e/1FAIpQLSe-miRpKzKqeIolNAHLDYJwgLEKEevXZXdaGsD8YPKp7BDKIw/viewform",
+    deadline: "October 25th 2024",
   },
   "Meet Your Mentor": {
     event: "Meet Your Mentor",
