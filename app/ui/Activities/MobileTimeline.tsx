@@ -36,7 +36,7 @@ const events = {
   },
   "YG Seminar": {
     event: "YG Seminar",
-    date: "TBA",
+    date: "October 25th 2024",
     description:
       "Opportunity for students to gain an image of what it's like to be in research or industry by listening to their journey.",
     image1: "/activities/Seminar/image1.jpg",

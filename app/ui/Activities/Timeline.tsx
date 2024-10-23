@@ -64,7 +64,7 @@ const events = {
   },
   "YG Seminar": {
     event: "YG Seminar",
-    date: "October 18th 2024",
+    date: "October 25th 2024",
     description:
       "The YG seminar invites professionals from different STEM fields such as medicine, IT, engineering, and natural sciences. This is an excellent opportunity for students to gain a bigger picture of what it's like to be in research or industry by listening to their journey and firsthand experience over the years. The seminar is also an excellent chance for students to directly ask presenters in a more approachable environment.",
     image1: "/activities/Seminar/image1.jpg",
