@@ -5,7 +5,18 @@ import { Label } from "@/components/ui/label";
 import { useState, useEffect } from "react";
 import ActivityPictures from "./ActivitiesPics";
 
-const events = {
+interface EventsDetails {
+  event: string;
+  date: string;
+  description: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  registrationForm: string;
+  deadline: string;
+}
+
+const events: { [event: string]: EventsDetails } = {
   "MTL Korean Youth Camp": {
     event: "MTL Korean Youth Camp",
     date: "August 31 - September 1st 2024",

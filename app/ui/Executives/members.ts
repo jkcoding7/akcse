@@ -2,10 +2,22 @@ export interface Executive {
   icon: string;
   label: string;
   names: string[];
-  images: {};
+  images: {
+    [name: string]: string[];
+  };
+  info: {
+    [fullName: string]: {
+      major: string;
+      mbti: string;
+      intro: string;
+      instagram: string;
+      linkedin: string;
+      github?: string;
+    };
+  };
 }
 
-export const executiveMembers = [
+export const executiveMembers: Executive[] = [
   {
     icon: "🍅",
     label: "Co-Presidents",
