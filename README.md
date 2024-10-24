@@ -20,4 +20,4 @@
 - [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 
 ## Contribution Process
-If you would like to contribute to this project and would like to know how, please refer to the [Contributing Guidelines](akcse_contributing.pdf).
+If you would like to contribute to this project, please refer to the [Contributing Guidelines](akcse_contributing.pdf).
