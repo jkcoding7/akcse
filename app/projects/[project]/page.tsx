@@ -6,7 +6,17 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { LiaGithub } from "react-icons/lia";
 
-const projectsInfo = {
+interface ProjectDetails {
+  image: string;
+  projectName: string;
+  contributers: string;
+  purpose: string;
+  achievements: string;
+  description: string;
+  link: string;
+}
+
+const projectsInfo: { [project: string]: ProjectDetails } = {
   AKCSE_McGill_Website: {
     image: "/AKCSE_McGill.png",
     projectName: "AKCSE McGill Website",

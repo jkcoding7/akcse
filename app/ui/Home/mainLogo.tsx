@@ -84,7 +84,7 @@ function Lens({ damping = 0.15, ...props }) {
 
 function Sky() {
   const ref = useRef<THREE.Group | null>(null);
-  const cloud0 = useRef<THREE.Mesh | null>(null);
+  const cloud0 = useRef<THREE.Mesh | null | any>(null);
   const config = {
     seed: 1,
     segments: 14,

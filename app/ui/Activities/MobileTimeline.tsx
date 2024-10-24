@@ -10,7 +10,17 @@ import React from "react";
 import ScrollAnimation from "react-animate-on-scroll";
 import { Label } from "@radix-ui/react-label";
 
-const events = {
+interface EventsDetails {
+  event: string;
+  date: string;
+  description: string;
+  image1: string;
+  image2: string;
+  image3: string;
+  registrationForm: string;
+  icon: string;
+}
+const events: { [event: string]: EventsDetails } = {
   "MTL Korean Youth Camp": {
     event: "MTL Korean Youth Camp",
     date: "August 31 - September 1st 2024",
