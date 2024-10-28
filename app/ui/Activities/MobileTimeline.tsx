@@ -69,7 +69,7 @@ const events: { [event: string]: EventsDetails } = {
   },
   Ideathon: {
     event: "Ideathon",
-    date: "TBA",
+    date: "November 16th 2024",
     description:
       "Students unleash their creativity and technical skills during a brainstorming of clever applications and websites.",
     image1: "/activities/Ideathon/image1.jpg",
