@@ -59,7 +59,7 @@ const events: { [event: string]: EventsDetails } = {
     image1: "/activities/Ideathon/image1.jpg",
     image2: "/activities/Ideathon/image2.jpg",
     image3: "/activities/Ideathon/image3.jpg",
-    registrationForm: "",
+    registrationForm: "https://forms.gle/r4AGwswee4rUT3Rk7",
     deadline: "November 15th 2024",
   },
   "Christmas Party": {
